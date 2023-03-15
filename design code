@@ -1,10 +1,18 @@
-module fulladder (
-  input a,
-  input b,
-  input carry_in,
-  output carry_out,
-  output sun_out );
-  assign { carry_out ,sum_out}= a+b+carry_in;
-  endmodule
-  
+module half_adder 
+  (
+   a,
+   b,
+   sum,
+   carry
+   );
+
+  input  a;
+  input  b;
+  output sum;
+  output carry;
+
+  assign sum   = a^b;  // bitwise xor
+  assign carry = a & b;  // bitwise and
+
+endmodule
   
