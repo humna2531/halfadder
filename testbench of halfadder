@@ -1,4 +1,4 @@
-// Testbench Verilog code for verification
+ // Testbench Verilog code for verification
 module half_adder_tb;
  
   reg r_a = 0;
@@ -14,8 +14,10 @@ module half_adder_tb;
      .carry(w_CARRY)
      );
  
-  initial
-    begin
+  initial begin
+  
+    $dumpfile("dump.vcd");
+    $dumpvars(1);
       r_a = 1'b0;
       r_b = 1'b0;
       #10;
